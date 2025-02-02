@@ -54,6 +54,20 @@ button{
     border-radius: 40px;
     cursor: pointer;
 }
+@media (max-width: 540px){
+    .todo-app{
+        padding: 40px 20px 70px;
+    }
+    .row{
+        padding-left: 10px;
+    }
+    input{
+        padding: 8px;
+    }
+    button{
+        padding: 14px 40px;
+    }
+}
 ul li{
     list-style: none;
     font-size: 17px;
