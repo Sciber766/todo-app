@@ -201,7 +201,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 @media (max-width: 540px){
     .todo-app{
-        padding: 40px 20px 70px;
+        padding: 40px 10px 70px;
     }
     .row{
         padding-left: 10px;
