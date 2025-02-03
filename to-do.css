@@ -37,7 +37,7 @@
     padding-left: 20px;
     margin-bottom: 25px;
 }
-input{
+input[type="text"]{
     flex: 1;
     border: none;
     outline: none;
@@ -54,6 +54,151 @@ button{
     border-radius: 40px;
     cursor: pointer;
 }
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 170px 12px 50px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    margin-top: 2px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+ul li::before{
+    content: "\f111";
+    font-family: 'Font Awesome 5 Free';
+    font-size: 28px;
+    color: #c4c0c087;
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 12px;
+}
+ul li.checked{
+    color: rgba(1, 64, 1, 0.759);
+    text-decoration: line-through;
+    background-color: rgba(0, 255, 0, 0.205);
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+ul li.checked::before{
+    content: "\f058";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; /* Needed for solid icons */
+    font-size: 28px;
+    color: #ff5945;
+    transition: all 0.3s ease-in-out;
+}
+.expired{
+    color: #ff5945;
+    text-decoration: line-through;
+    background-color: #ff58453a;
+    transition: all 0.3s ease-in-out;
+}
+ul li span{
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    top: 2px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+ul li .dueDate{
+    position: absolute;
+    right: 60px;
+    width: 100px;
+    height: 25px;
+    top: 9px;
+    font-size: 15px;
+    color: #555;
+    line-height: 22px;
+    border: 2px solid #007bffcc;
+    border-radius: 10px;
+}
+
+ul li span:hover{
+    color: #ff5945;
+    background: #e3e4e67d;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+@keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+}  
+
+input[type="date"] {
+    padding: 10px;
+    font-size: 13px;
+    outline: none;
+    background: transparent;
+    border: 2px solid #007bff4f;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+.alert{
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    background-color: #ffd0d0;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    height: 50px;
+    color: #ff1900;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.removeAlert{
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    top: 4px;
+    font-size: 30px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.removeAlert:hover{
+    color: #ff5945;
+}
+input[type="date"]:focus {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px #007bff4f;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    width:  90px;
+}
 @media (max-width: 540px){
     .todo-app{
         padding: 40px 20px 70px;
@@ -67,48 +212,11 @@ button{
     button{
         padding: 14px 35px;
     }
-}
-ul li{
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 70px 12px 50px;
-    user-select: none;
-    position: relative;
-    cursor: pointer;
-}
-ul li::before{
-    content: "";
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 8px;
-    left: 12px;
-}
-ul li.checked{
-    color: #555;
-    text-decoration: line-through;
-}
-ul li.checked::before{
-    background-image: url(images/checked.png);
-}
-ul li span{
-    position: absolute;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    top: 2px;
-    font-size: 22px;
-    color: #555;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    transition: 0.1s;
-}
-ul li span:hover{
-    color: #ff5945;
-    background: #edeef0;
+    input[type="date"]{
+        width: 40px;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 1;
+        position: relative;
+    }
 }
