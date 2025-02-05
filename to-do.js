@@ -111,7 +111,7 @@ function display(){
         let today = new Date().toISOString().split('T')[0];
         
         if(task.dueDate <= today){
-            li.classList.add('expired')
+            li.classList.add('expired');
             console.log(li.firstChild);
             giveAlert(`Due date reached for task: ${li.firstChild.textContent}`);
         }

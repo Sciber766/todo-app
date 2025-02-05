@@ -63,6 +63,7 @@ ul li{
     position: relative;
     cursor: pointer;
     margin-top: 2px;
+    border: 1px solid #c4c0c087;
     border-radius: 15px;
     transition: all 0.3s ease-in-out;
 }
@@ -84,6 +85,7 @@ ul li.checked{
     color: rgba(1, 64, 1, 0.759);
     text-decoration: line-through;
     background-color: rgba(0, 255, 0, 0.205);
+    border: 1px solid rgba(0, 255, 0, 0.281);
     opacity: 0.8;
     transition: all 0.3s ease-in-out;
 }
@@ -99,6 +101,7 @@ ul li.checked::before{
     color: #ff5945;
     text-decoration: line-through;
     background-color: #ff58453a;
+    border: 1px solid #ff58453b;
     transition: all 0.3s ease-in-out;
 }
 ul li span{
