@@ -154,4 +154,13 @@ function giveAlert(text){
         remove.classList.add('removeAlert');
         remove.style.margin ="0 5px"
         alert.appendChild(remove);
+
+    // deleting automatically
+    setTimeout(() => {
+        let item =remove.parentElement;
+        item.style.animation = "fadeOut 0.5s ease-in-out";
+        setTimeout(() => {
+            remove.parentElement.remove();
+        }, 500);
+    }, 5000);
 }
