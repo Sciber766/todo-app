@@ -209,6 +209,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     input{
         padding: 8px;
+        width: 180px;
     }
     button{
         padding: 14px 20px;
